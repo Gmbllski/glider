@@ -6,7 +6,7 @@ body{
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding-left: 15px;
     padding: 15px;
@@ -19,7 +19,23 @@ body{
     transition: transform .2s;
 }
 .glide__slide img:hover{
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5); 
-    transform: scale(1.5);
+    opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
 }
